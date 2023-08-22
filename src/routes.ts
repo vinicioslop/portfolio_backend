@@ -6,14 +6,17 @@ import ServiceController from './controller/ServiceController';
 
 const routes = Router();
 
-routes.get("/users", UserController.find)
 routes.post("/user", UserController.create);
+routes.get("/users", UserController.find)
+routes.get("/user/:id", UserController.findOne);
+routes.put("/user/:id", UserController.update);
+routes.delete("/user/:id", UserController.delete);
 
-routes.get("/services", ServiceController.find)
 routes.post("/service", ServiceController.create);
-routes.delete("/service/(:id)", ServiceController.delete);
+routes.get("/services", ServiceController.find)
+routes.delete("/service/:id", ServiceController.delete);
 
-routes.get("/projects", ProjectController.find)
 routes.post("/project", ProjectController.create);
+routes.get("/projects", ProjectController.find);
 
 export default routes;
