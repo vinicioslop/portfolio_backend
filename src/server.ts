@@ -2,15 +2,20 @@ import express from 'express';
 import mongoose from 'mongoose';
 import routes from './routes';
 
-mongoose.connect('mongodb://localhost/portfoliodata');
-
 const app = express();
+const PORT: number = 3000;
 
 app.use(express.json());
-app.use(routes);
 
-const port: number = 3000;
+mongoose.connect('mongodb+srv://portfolio:portfolio@mongodb.qp5j8fc.mongodb.net/?retryWrites=true&w=majority');
 
-app.listen(port, () => {
-    console.log(`Listening on http://localhost:${port}/`);
+const db = mongoose.connection;
+
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.once('open', () => {
+  console.log('Connected to MongoDB');
+  app.use('/api', routes); // Use the routes
+  app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+  });
 });
