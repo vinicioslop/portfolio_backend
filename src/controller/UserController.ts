@@ -46,10 +46,10 @@ class UserController {
 
     async findOne(request: Request, response: Response) {
         try {
-            const item = await User.findById(request.params.id);
+            const user = await User.findById(request.params.id);
 
-            if (item) {
-                response.json(item);
+            if (user) {
+                response.json(user);
             } else {
                 response.status(404).json({ error: 'User not found' });
             }
@@ -60,11 +60,11 @@ class UserController {
 
     async update(request: Request, response: Response) {
         try {
-            const updatedItem = await User.findByIdAndUpdate(request.params.id, request.body, {
+            const updatedUser = await User.findByIdAndUpdate(request.params.id, request.body, {
                 new: true,
             });
-            if (updatedItem) {
-                response.json(updatedItem);
+            if (updatedUser) {
+                response.json(updatedUser);
             } else {
                 response.status(404).json({ error: 'User not found' });
             }
@@ -75,9 +75,9 @@ class UserController {
 
     async delete(request: Request, response: Response) {
         try {
-            const deletedItem = await User.findByIdAndDelete(request.params.id);
-            if (deletedItem) {
-                response.json(deletedItem);
+            const deletedUser = await User.findByIdAndDelete(request.params.id);
+            if (deletedUser) {
+                response.json(deletedUser);
             } else {
                 response.status(404).json({ error: 'User not found' });
             }
