@@ -4,10 +4,10 @@ import User from "../database/schemas/User";
 
 class UserController {
     async create(request: Request, response: Response) {
-        const { name, email, password } = request.body;
+        const { name, password } = request.body;
 
         try {
-            const userExists = await User.findOne({ email: email });
+            const userExists = await User.findOne({ name: name });
 
             if (userExists) {
                 return response.status(400).json({
@@ -18,7 +18,6 @@ class UserController {
 
             const user = await User.create({
                 name,
-                email,
                 password
             });
 
