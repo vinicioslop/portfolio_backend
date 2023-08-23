@@ -11,7 +11,9 @@ class ProjectController {
             githubUrl,
             liveUrl,
             imageUrl,
-            imageAlt
+            imageAlt,
+            projectType,
+            working
         } = request.body;
 
         try {
@@ -31,7 +33,9 @@ class ProjectController {
                 githubUrl,
                 liveUrl,
                 imageUrl,
-                imageAlt
+                imageAlt,
+                projectType,
+                working
             });
 
             return response.json(project);
@@ -43,7 +47,7 @@ class ProjectController {
         }
     }
 
-    async find(request: Request, response: Response) {
+    async findAll(request: Request, response: Response) {
         try {
             const projects = await Project.find();
 

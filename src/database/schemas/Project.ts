@@ -32,6 +32,17 @@ const Project = new mongoose.Schema({
         type: String,
         required: true,
     },
+    projectType: {
+        type: String,
+        required: true,
+        default: "small-project"
+        // TYPES: small-project, complete-project
+    },
+    working: {
+        type: Boolean,
+        required: true,
+        default: false
+    },
     createdAt: {
         type: Date,
         default: Date.now()

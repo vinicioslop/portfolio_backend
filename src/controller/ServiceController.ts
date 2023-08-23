@@ -32,7 +32,7 @@ class ServiceController {
         }
     }
 
-    async find(request: Request, response: Response) {
+    async findAll(request: Request, response: Response) {
         try {
             const users = await Service.find();
 

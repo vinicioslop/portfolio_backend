@@ -13,13 +13,13 @@ const routes = Router();
 // routes.delete("/user/:id", UserController.delete);
 
 routes.post("/service", ServiceController.create);
-routes.get("/services", ServiceController.find);
+routes.get("/services", ServiceController.findAll);
 routes.get("/service/:id", ServiceController.findOne);
 routes.put("/service/:id", ServiceController.update);
 routes.delete("/service/:id", ServiceController.delete);
 
 routes.post("/project", ProjectController.create);
-routes.get("/projects", ProjectController.find);
+routes.get("/projects", ProjectController.findAll);
 routes.get("/project/:id", ProjectController.findOne);
 routes.put("/project/:id", ProjectController.update);
 routes.delete("/project/:id", ProjectController.delete);

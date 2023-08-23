@@ -1,0 +1,57 @@
+[
+    [
+        {
+            "name": "Manutenção de Computadores",
+            "description": "Realizo a análise e resolução de problemas técnicos em computadores de mesa e laptops.",
+            "imageUrl": "https://images.unsplash.com/photo-1604754742629-3e5728249d73?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+            "imageAlt": "Foto de <a href='https://unsplash.com/@jeshoots?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>JESHOOTS.COM</a> na <a href='https://unsplash.com/pt-br/fotografias/sMKUYIasyDM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Unsplash</a>"
+        },
+        {
+            "name": "Orçamento para melhorias de sistemas",
+            "description": "Realizo a análise e orçamento de possíveis melhorias para sistemas, computador de mesa ou laptop, além de orçamento para montagem de computadores completos.",
+            "imageUrl": "https://images.unsplash.com/photo-1661347561635-58eff5e23f3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=862&q=80",
+            "imageAlt": "Foto de <a href='https://unsplash.com/@samsungmemory?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Samsung Memory</a> na <a href='https://unsplash.com/pt-br/fotografias/gAQyWMntC5w?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Unsplash</a>"
+        },
+        {
+            "name": "Desenvolvimento de Sites e Aplicativos",
+            "description": "Realizo o desenvolvimento de sites e aplicações para os mais diversos objetivos, como: pessoais, vitrine de empresas, blogs entre outros.",
+            "imageUrl": "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+            "imageAlt": "Foto de <a href='https://unsplash.com/@ffstop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Fotis Fotopoulos</a> na <a href='https://unsplash.com/pt-br/fotografias/DuHKoV44prg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Unsplash</a>"
+        }
+    ],
+    [
+        {
+            "name": "Buyge Frontend",
+            "description": "Marketplace de venda de produtos do segmento Geek.",
+            "technologies": ["HTML", "CSS", "JavaScript"],
+            "imageUrl": "https://i.pinimg.com/564x/5e/a0/56/5ea056c9d765ef8ede2e8ef78ec94d7d.jpg",
+            "imageAlt": "Exemplo de tela inicial do projeto Buyge",
+            "githubUrl": "https://github.com/vinicioslop/buyge-frontend",
+            "liveUrl": "",
+            "projectType": "complete-project",
+            "working": false
+        },
+        {
+            "name": "Portfolio",
+            "description": "Projeto de Portfolio para disponibilizar outros projetos desenvolvidos po mim.",
+            "technologies": ["Next.js", "React", "HTML", "CSS", "JavaScript"],
+            "imageUrl": "https://i.pinimg.com/564x/4e/24/e8/4e24e8534d875d5c92ca2fb589c23f44.jpg",
+            "imageAlt": "Exemplo de tela inicial do projeto Portfolio",
+            "githubUrl": "https://github.com/vinicioslop/portfolio",
+            "liveUrl": "https://portfolio.vinicioslop.com.br",
+            "projectType": "complete-project",
+            "working": true
+        },
+        {
+            "name": "Social Tree",
+            "description": "Projeto inspitado no Linktree, aplicação onde é possível divulgar links de acesso a redes sociais e contato pessoal.",
+            "technologies": ["Next.js", "React", "HTML", "CSS", "JavaScript"],
+            "imageUrl": "https://i.pinimg.com/564x/9d/9d/68/9d9d680a1643224382fbf253a9f38e9b.jpg",
+            "imageAlt": "Exemplo de tela inicial do projeto Social Tree",
+            "githubUrl": "https://github.com/vinicioslop/social-tree",
+            "liveUrl": "https://social.vinicioslop.com.br",
+            "projectType": "small-project",
+            "working": false
+        }
+    ]
+]
