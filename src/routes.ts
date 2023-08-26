@@ -1,10 +1,14 @@
 import { Router } from 'express';
 
+import AuthController from './controller/AuthController';
 import UserController from './controller/UserController';
 import ProjectController from './controller/ProjectController';
 import ServiceController from './controller/ServiceController';
 
 const routes = Router();
+
+// Rota de login para obter o token
+routes.post("/login", AuthController.login);
 
 routes.post("/user", UserController.create);
 routes.get("/users", UserController.find)

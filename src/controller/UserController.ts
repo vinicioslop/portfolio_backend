@@ -12,16 +12,18 @@ class UserController {
             if (userExists) {
                 return response.status(400).json({
                     error: "Ooops",
-                    message: "User already exists"
+                    message: "Name already used. Please choose another one."
                 });
             }
 
-            const user = await User.create({
+            let user = await User.create({
                 name,
                 password
             });
 
-            return response.json(user);
+            user.password = 'encrypted';
+
+            return response.json((user));
         } catch (error) {
             return response.status(500).json({
                 error: "Registration failed",
@@ -32,7 +34,7 @@ class UserController {
 
     async find(request: Request, response: Response) {
         try {
-            const users = await User.find();
+            const users = await User.find({}, '-password');
 
             return response.json(users);
         } catch (error) {
@@ -45,7 +47,7 @@ class UserController {
 
     async findOne(request: Request, response: Response) {
         try {
-            const user = await User.findById(request.params.id);
+            const user = await User.findById(request.params.id, '-password');
 
             if (user) {
                 response.json(user);
@@ -59,10 +61,14 @@ class UserController {
 
     async update(request: Request, response: Response) {
         try {
-            const updatedUser = await User.findByIdAndUpdate(request.params.id, request.body, {
-                new: true,
-            });
+            const updatedUser = await User.findByIdAndUpdate(
+                request.params.id,
+                request.body,
+                {
+                    new: true,
+                });
             if (updatedUser) {
+                updatedUser.password = 'encrypted';
                 response.json(updatedUser);
             } else {
                 response.status(404).json({ error: 'User not found' });
@@ -76,6 +82,8 @@ class UserController {
         try {
             const deletedUser = await User.findByIdAndDelete(request.params.id);
             if (deletedUser) {
+                deletedUser.password = 'encrypted';
+
                 response.json(deletedUser);
             } else {
                 response.status(404).json({ error: 'User not found' });
