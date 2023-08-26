@@ -7,8 +7,7 @@ import ServiceController from './controller/ServiceController';
 
 const routes = Router();
 
-// Rota de login para obter o token
-routes.post("/login", AuthController.login);
+routes.post("/login", AuthController.generateToken, AuthController.login);
 
 routes.post("/user", UserController.create);
 routes.get("/users", UserController.find)

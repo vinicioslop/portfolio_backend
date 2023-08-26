@@ -7,6 +7,13 @@ class UserController {
         const { name, password } = request.body;
 
         try {
+            // if (!request.token) {
+            //     return response.status(401).json({
+            //         error: "Ooops",
+            //         message: "You are not allowed to do this!"
+            //     });
+            // }
+
             const userExists = await User.findOne({ name: name });
 
             if (userExists) {
@@ -25,7 +32,7 @@ class UserController {
 
             return response.json((user));
         } catch (error) {
-            return response.status(500).json({
+            return response.status(401).json({
                 error: "Registration failed",
                 message: error
             })
