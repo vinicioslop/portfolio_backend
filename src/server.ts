@@ -19,7 +19,7 @@ const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 db.once('open', () => {
   console.log('Connected to MongoDB');
-  app.use('/api', routes); // Use the routes
+  app.use(routes); // Use the routes
   app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
   });
