@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-    "vercel-build": "",
+    "vercel-build": "echo hello",
     "build": "tsc --outDir dist",
     "clean": "tsc --build --clean"
   },
