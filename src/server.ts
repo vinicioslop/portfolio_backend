@@ -4,8 +4,8 @@ import mongoose = require('mongoose');
 import routes from './routes';
 
 const app = express();
-const URI = process.env.URI || "mongodb://localhost/portfoliodata";
-const PORT: number = 3000;
+const URI = process.env.URI ?? "mongodb://localhost/portfoliodata";
+const PORT = process.env.PORT ?? 3000;
 
 // LOCAL DOCKER: mongodb://localhost/portfoliodata
 // CLOUD: mongodb+srv://portfolio:portfolio@cluster0.vr2qnaw.mongodb.net/?retryWrites=true&w=majority
