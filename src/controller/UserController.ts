@@ -7,13 +7,6 @@ class UserController {
         const { name, password } = request.body;
 
         try {
-            // if (!request.token) {
-            //     return response.status(401).json({
-            //         error: "Ooops",
-            //         message: "You are not allowed to do this!"
-            //     });
-            // }
-
             const userExists = await User.findOne({ name: name });
 
             if (userExists) {

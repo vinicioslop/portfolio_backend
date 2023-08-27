@@ -1,13 +1,10 @@
 import { Router } from 'express';
 
-import AuthController from './controller/AuthController';
 import UserController from './controller/UserController';
 import ProjectController from './controller/ProjectController';
 import ServiceController from './controller/ServiceController';
 
 const routes = Router();
-
-routes.post("/login", AuthController.generateToken, AuthController.login);
 
 routes.post("/user", UserController.create);
 routes.get("/users", UserController.find)
