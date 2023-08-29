@@ -1,10 +1,16 @@
-import { Router } from 'express';
+import { Router, Request, Response } from 'express';
 
 import UserController from './controller/UserController';
 import ProjectController from './controller/ProjectController';
 import ServiceController from './controller/ServiceController';
 
 const routes = Router();
+
+routes.get("/", (req: Request, res: Response) => {
+    res.status(200).json({
+        message: "Connection established"
+    });
+})
 
 routes.post("/user", UserController.create);
 routes.get("/users", UserController.find)
