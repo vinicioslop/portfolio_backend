@@ -1,5 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
+
+import cors from 'cors';
 require('dotenv').config();
 
 import routes from './routes';
@@ -9,6 +11,7 @@ const URI: string = process.env.URI ?? "mongodb://localhost/portfoliodata";
 const PORT: number = process.env.PORT ? Number(process.env.PORT) : 3000;
 
 app.use(express.json());
+app.use(cors());
 
 mongoose.connect(URI, { dbName: 'portfolio' });
 
