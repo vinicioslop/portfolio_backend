@@ -1,10 +1,11 @@
 import express from "express";
 import mongoose from "mongoose";
-
-import cors from 'cors';
-require('dotenv').config();
+import cors from "cors";
+import * as dotenv from 'dotenv';
 
 import routes from './routes';
+
+dotenv.config();
 
 const app = express();
 const URI: string = process.env.URI ?? "mongodb://localhost/portfoliodata";
